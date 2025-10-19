@@ -13,6 +13,7 @@ hosts.yml
 !.vimrc
 !.zshrc
 !.gitignore
+!.config
 
 # --- System / OS ---
 .DS_Store
