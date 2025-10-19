@@ -1,0 +1,28 @@
+# --- Files from our conversation ---
+# Private Git configuration (for name/email)
+.gitconfig-private
+*.local
+
+# GitHub CLI host file (contains auth tokens)
+hosts.yml
+
+
+# --- General ---
+.*
+!.bashrc
+!.vimrc
+!.zshrc
+!.gitignore
+
+# --- System / OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
