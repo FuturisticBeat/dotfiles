@@ -96,3 +96,8 @@ eval "$(thefuck --alias)"
 
 # opencode
 export PATH=/home/sudocode88/.opencode/bin:$PATH
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
