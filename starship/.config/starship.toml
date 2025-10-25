@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
+\u256d\u2500[](red)\
 $os\
 $username\
 [](bg:peach fg:red)\
@@ -28,7 +28,7 @@ $battery\
 [ ](fg:blue)\
 $cmd_duration\
 $line_break\
-\n\n$character"""
+\n\u2502\n\u2570\u2500$character"""
 
 
 palette = 'catppuccin_mocha'
