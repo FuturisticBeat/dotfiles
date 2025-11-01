@@ -38,7 +38,7 @@ tooltip {
   border-radius: 20px;
 }
 
-#workspaces button:hover {
+workspaces button:hover {
   background: inherit;
   /* Use the same background as the normal state */
   color: inherit;
@@ -150,6 +150,19 @@ tooltip {
   border-radius: 0 20px 20px 0;
   margin-right: 5px;
   border-left: 0px;
+}
+
+#battery.warning:not(.charging) {
+  color: yellow;
+}
+
+/* Styles for the critical state when discharging */
+#battery.critical:not(.charging) {
+  color: red;
+}
+
+#battery.charging {
+  color: #26A65B;
 }
 
 #custom-weather {
