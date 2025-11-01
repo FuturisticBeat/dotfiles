@@ -101,3 +101,7 @@ export PATH=/home/sudocode88/.opencode/bin:$PATH
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+
+function rwb() {
+  killall waybar && nohup waybar >/dev/null 2>&1 &
+}
