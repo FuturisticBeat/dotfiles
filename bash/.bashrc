@@ -105,3 +105,7 @@ eval "$(atuin init bash)"
 function rwb() {
   killall waybar && nohup waybar >/dev/null 2>&1 &
 }
+
+function off() {
+  systemctl poweroff
+}
