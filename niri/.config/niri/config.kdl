@@ -617,6 +617,8 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
+spawn-at-startup "waybar"
+
 spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/sudocode88/Pictures/Wallpapers/galaxy-grey_pixelart.png"
 
 layer-rule {
