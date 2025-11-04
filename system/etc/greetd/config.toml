@@ -1,0 +1,12 @@
+[terminal]
+# The VT to run the greeter on. Use an unused TTY.
+vt = 7
+
+[default_session]
+# The command to run the tuigreet greeter
+# --cmd specifies the command to start after successful login
+# We use niri-session to ensure proper systemd integration
+command = "tuigreet --cmd niri-session --remember --asterisks --time"
+# The user to run the greeter as
+user = "greetd"
+
