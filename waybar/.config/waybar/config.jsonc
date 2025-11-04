@@ -26,6 +26,7 @@
     "pulseaudio",
     // "niri/language",
     "battery",
+    "custom/power",
     "tray"
   ],
   // Modules configuration
@@ -132,7 +133,8 @@
   "clock": {
     // "timezone": "America/New_York",
     "format": "  {:%H:%M   %a, %b %d}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip": false
   },
   "cpu": {
     "format": "{usage}% ",
@@ -151,7 +153,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "tooltip": false
   },
   "backlight": {
     // "device": "acpi_video1",
@@ -162,7 +165,8 @@
       "🌗",
       "🌖",
       "🌕"
-    ]
+    ],
+    "tooltip": false
   },
   "battery": {
     "states": {
@@ -170,6 +174,7 @@
       "warning": 30,
       "critical": 15
     },
+    "tooltip": false,
     "format-time": "{H}h {M}m",
     "format-alt": "{capacity}% {icon} ",
     "format-full": "{capacity}% {icon}",
@@ -230,7 +235,8 @@
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip": false
   },
   "custom/media": {
     "format": "{icon} {text}",
@@ -247,13 +253,16 @@
   "custom/power": {
     "format": "⏻ ",
     "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    "menu-actions": {
-      "shutdown": "shutdown",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
-    }
+    "on-click": "niri msg action quit",
+    "max-length": 20,
+    "tooltip-format": "Logout Niri"
+    // "menu": "on-click",
+    // "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    // "menu-actions": {
+    //   "shutdown": "shutdown",
+    //   "reboot": "reboot",
+    //   "suspend": "systemctl suspend",
+    //   "hibernate": "systemctl hibernate"
+    // }
   }
 }

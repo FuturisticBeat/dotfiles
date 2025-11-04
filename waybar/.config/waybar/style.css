@@ -38,15 +38,16 @@ tooltip {
   border-radius: 20px;
 }
 
-workspaces button:hover {
-  background: inherit;
+#workspaces button:hover {
+  background: none;
   /* Use the same background as the normal state */
   color: inherit;
   /* Use the same text color as the normal state */
   border: none;
   /* Ensure no default border is added */
   box-shadow: none;
-  transition: .15s;
+  transition: none;
+  text-shadow: none;
 }
 
 #custom-power_profile,
@@ -60,7 +61,8 @@ workspaces button:hover {
 #temperature,
 #workspaces,
 #tray,
-#backlight {
+#backlight,
+#custom-power {
   background: #1e1e2e;
   opacity: 0.8;
   padding: 0px 10px;
@@ -71,6 +73,7 @@ workspaces button:hover {
 
 #temperature {
   border-radius: 20px 0px 0px 20px;
+  border-right: 0px;
 }
 
 #temperature.critical {
@@ -79,7 +82,8 @@ workspaces button:hover {
 
 #backlight {
   border-radius: 0px;
-  padding-left: 7px;
+  padding-left: 0px;
+  border-right: 0px;
 }
 
 #tray {
@@ -132,24 +136,20 @@ workspaces button:hover {
 
 #pulseaudio {
   color: #89b4fa;
-  border-left: 0px;
   border-right: 0px;
 }
 
 #pulseaudio.microphone {
   color: #cba6f7;
-  border-left: 0px;
   border-right: 0px;
-  border-radius: 0px 20px 20px 0px;
-  margin-right: 5px;
-  padding-right: 8px;
+  margin-right: 0px;
+  padding-right: 0px;
 }
 
 #battery {
   color: #a6e3a1;
-  border-radius: 0 20px 20px 0;
-  margin-right: 5px;
-  border-left: 0px;
+  margin-right: 0px;
+  border-right: 0px;
 }
 
 #battery.warning:not(.charging) {
@@ -163,6 +163,12 @@ workspaces button:hover {
 
 #battery.charging {
   color: #26A65B;
+}
+
+#custom-power {
+  color: #00ffff;
+  border-radius: 0 20px 20px 0;
+  margin-right: 5px;
 }
 
 #custom-weather {
