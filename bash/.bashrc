@@ -92,14 +92,12 @@ eval "$(starship init bash)"
 # initialize zoxide and set it to run in place of cd.
 eval "$(zoxide init --cmd cd bash)"
 
-eval "$(thefuck --alias)"
-
 # opencode
 export PATH=/home/sudocode88/.opencode/bin:$PATH
 
 . "$HOME/.atuin/bin/env"
 
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+[[ -f ~/.atuin/bash-preexec.sh ]] && source ~/.atuin/bash-preexec.sh
 eval "$(atuin init bash)"
 
 function rwb() {
