@@ -44,7 +44,7 @@ input {
 
     mouse {
         // off
-        // natural-scroll
+        natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "no-scroll"
@@ -616,8 +616,6 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
-
-spawn-at-startup "waybar"
 
 spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/sudocode88/Pictures/Wallpapers/galaxy-grey_pixelart.png"
 
