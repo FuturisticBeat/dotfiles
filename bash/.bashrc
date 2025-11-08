@@ -78,7 +78,7 @@ alias ghauth='pass github/gh-cli-token | gh auth login --with-token'
 alias lg='lazygit'
 
 # set nvim as default text editor.
-export EDITOR="nvim"
+export EDITOR="/usr/bin/nvim"
 
 # set dotnet root globally.
 export DOTNET_ROOT=$HOME/.dotnet
@@ -107,3 +107,6 @@ function rwb() {
 function off() {
   systemctl poweroff
 }
+
+# set yazi config home
+export YAZI_CONFIG_HOME="~/.config/yazi"
