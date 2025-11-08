@@ -46,7 +46,7 @@ alias cat='bat --paging=never'
 eval "$(fzf --bash)"
 
 # add preview to fzf key bindings.
-export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 # add previews to command path searching with fzf using [command] ** <TAB>.
