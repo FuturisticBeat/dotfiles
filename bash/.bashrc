@@ -24,16 +24,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# shortcut function to run yazi.
-function yazi() {
-  flatpak run --command=yazi io.github.sxyazi.yazi "$@"
-}
-
-function ya() {
-  # share=network enables networking since the package manager needs to download themes
-  flatpak --share=network run --command=ya io.github.sxyazi.yazi "$@"
-}
-
 # create function shortcut for eza to replace ls when listing files and directories.
 function ls() {
   eza --color=always --long --git --icons=always --all --header --tree -L=2 --no-user --no-permissions --no-time -o "$@"
@@ -78,11 +68,16 @@ alias ghauth='pass github/gh-cli-token | gh auth login --with-token'
 alias lg='lazygit'
 
 # set nvim as default text editor.
-export EDITOR="/usr/bin/nvim"
+export EDITOR="/usr/bin/code"
 
 # set dotnet root globally.
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$HOME/.dotnet
+export DOTNET_ROOT=/usr/lib64/dotnet
+
+# Add the tool path (where dotnet-csi lives) to your PATH
+export PATH=$PATH:$HOME/.dotnet/tools
+
+# Required to let the .NET 8 tool run on your .NET 10 runtime
+export DOTNET_ROLL_FORWARD=LatestMajor
 
 # create shortcut alias for clear.
 alias c='clear'
@@ -91,9 +86,6 @@ eval "$(starship init bash)"
 
 # initialize zoxide and set it to run in place of cd.
 eval "$(zoxide init --cmd cd bash)"
-
-# opencode
-export PATH=/home/sudocode88/.opencode/bin:$PATH
 
 . "$HOME/.atuin/bin/env"
 
@@ -110,3 +102,7 @@ function off() {
 
 # set yazi config home
 export YAZI_CONFIG_HOME="~/.config/yazi"
+
+function vlc() {
+  flatpak run org.videolan.VLC
+}
