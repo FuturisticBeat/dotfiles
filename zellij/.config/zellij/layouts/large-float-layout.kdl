@@ -7,7 +7,7 @@ layout {
     //    plugin location="zellij:status-bar"
     //}
     floating_panes {
-        pane name="gemini" {
+        pane name="ollama" {
             x "10%"
             y "10%"
             width "80%"
